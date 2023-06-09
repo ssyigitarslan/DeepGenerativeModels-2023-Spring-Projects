@@ -1,0 +1,14 @@
+{
+  "latent_dim": 256,
+  "cluster_number": 8,
+  "n_per_kp": 4,
+  "batch_size": 16,
+  "lr_gen": 0.0001,
+  "lr_disc": 0.0004,
+  "num_workers": 0,
+  "data_root": "",
+  "class_name": "celeba_wild",
+  "image_size": 128,
+  "embedding_dim": 128,
+  "log": "GanSEG"
+}

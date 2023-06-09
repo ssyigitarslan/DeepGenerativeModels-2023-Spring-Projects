@@ -1,0 +1,6 @@
+- acronym: GANSeg
+  title: GANSeg: Learning to Segment by Unsupervised Hierarchical Image Generation
+  year: 2022
+  venue: CVPR
+  paper_authors: Xingzhe He, Bastian Wandt, Helge Rhodin
+  group_members: Ahmet Kağan Kaya
