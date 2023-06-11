@@ -9,4 +9,4 @@ METU CENG796 Deep Generative Models 2023-Spring Course Projects
 * [GPNN](GPNN/) -  Drop The GAN: In Defense of Patch Nearest Neighbors as Single Image Generative Models (CVPR'22)
 * [FurryGAN](FurryGAN/) - FurryGAN: High Quality Foreground-aware Image Synthesis (ECCV'22)
 * [ProtVAE](https://github.com/ssyigitarslan/ProtVAE) - ProtVAE: End-to-End deep structure generative model for protein design
-
+* [GenDA](https://github.com/erceguder/inference-time-latent-code-learning) - Few-shot cross-domain image generation via inference-time latent-code learning (ICLR'23)
