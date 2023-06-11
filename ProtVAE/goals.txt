@@ -1,0 +1,15 @@
+Project: END-TO-END DEEP STRUCTURE GENERATIVE MODEL FOR PROTEIN DESIGN (https://www.biorxiv.org/content/10.1101/2022.07.09.499440v1.full.pdf)
+
+Qualitative Goal: The qualitative goal of the project is to showcase the ability of our model to reconstruct protein structures. Specifically, for Figure 2(A):
+a. We aim to provide examples of reconstructed backbone structures with different folds and sizes by working with protein structures such as 1WTE, 3ZIJ, and 2JAC.
+b. We plan to illustrate the hidden representation of our model that has learned useful folding information from input proteins. This will be achieved by embedding the components using t-SNE in Figure 2(D), color-coded with CATH class labels. We will show how the protein structures cluster in the hidden space.
+
+Quantitative Goal: The quantitative goal is to evaluate the performance of our model and compare it to the specified performance metrics in Table 1 of the article.
+a. We will calculate average RMSD, TM-score, LDDT, and L1 distance values using different feature combinations of our model. We will compare these values to the results reported in Table 1.
+b. We will evaluate short, medium, and long-range contact accuracy and present results related to inter-residue distances derived from the generated 3D coordinates. These results will be presented in Table 1.
+
+—— Version 1 submission ——
+The desired figures could not be plotted, but we prepared the VAE code as an example for Version 2. Additionally, there were some issues encountered while preparing the dataset for execution. These issues will be resolved in Version 2, and the necessary figures will be plotted. As a result, selected proteins from the dataset were plotted in 3D, and after running the written VAE code, the results will be plotted in Version 2.
+
+-- Version 2 submission --
+The issues identified in Version 1 have been resolved, and the required dataset has been prepared and plotted. The planned figures that encountered errors in Version 1 have been completed and added to main.ipynb.
