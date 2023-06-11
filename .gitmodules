@@ -2,5 +2,5 @@
 	path = SaShiMi
 	url = https://github.com/necrashter/SaShiMi-796.git
 [submodule "inference-time-latent-code-learning"]
-	path = inference-time-latent-code-learning
+	path = GenDA
 	url = git@github.com:erceguder/inference-time-latent-code-learning.git
