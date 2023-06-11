@@ -1,0 +1,18 @@
+Drop the GAN: In Defense of Patches Nearest Neighbors as Single Image Generative Models
+https://openaccess.thecvf.com/content/CVPR2022/papers/Granot_Drop_the_GAN_In_Defense_of_Patches_Nearest_Neighbors_As_CVPR_2022_paper.pdf
+Quantitative: Table 1, Single Image FID for Places50 dataset
+Qualitative: Figures 4, 5 and 6
+—— version 1 submission ——
+We did not change our goals.
+We could not achieve the goals but we are confident that we will be able to in v2. You can find our qualitative and quantitative results in the notebook. 
+The main problem we are facing is GPU VRAM. We are trying to do a very large matrix multiplication which results in OOM. We do not have to load all of the matrix for the multiplication and we are going to implement this for v2.
+Once we resolve this we are going to be able to get much higher quality generations. Right now, we have to use very small patch size which we know to lead to bad quality generations. For some cases we are able to get good results, which can be seen in the qualitative results in the notebook. This depends on the nature and resolution of the image.
+We have all the necessary infrastructure in place and we will be reducing the memory requirements of our model and finding the optimal hyperparameters. Hyperparameters could also be the problem as they were not given in the paper and we could not do a proper grid search.
+—— version 2 submission ——
+We did not change our goals.
+We found all the original hyperparameters.
+We mostly solved the GPU memory issue however we still cannot do full resolution generations but we can use the proper hyperparameters now such as the patch size.
+Nevertheless we could not nail our goals but we had substantial improvement over v1. We had a bug in v1 where we operated on the wrong axis during attention and fixing it greatly improved the performance.
+The two important issues in our generations are blurriness and excessive horizontal repeating of patches.
+We are not sure on the cause of these problems and we don't have training or hyperparameters to blame. We think we understood the paper, it is a simple yet potent one, and there is likely an error in our implementation that we could not find.
+We faithfully reproduced the paper with all of its components disregarding the error. 
