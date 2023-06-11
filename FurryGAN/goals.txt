@@ -1,0 +1,32 @@
+Project Paper Title: FurryGAN: High Quality Foreground-aware Image Synthesis 
+Project Paper URL: https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136740679.pdf 
+
+Minimum Set of Results to Reproduce: We are planning to work with the AFHQv2-Cat dataset.
+Qualitative Results: Fig. 9 (b)
+Quantitative Results:
+	Mask Generation: Table 2
+	Image Generation: Table 3
+
+Plan B:
+In the paper, the authors state that the model was trained on a single RTX-3090 for 100 hours. However, how long it takes specifically for the AFHQv2-Cat dataset is not mentioned. Due to a lack of computational resources, we may not produce the results given in the paper using 256x256 resolution, which is the default resolution used in the paper. Therefore, as a fall-back plan, we plan to use 64x64 images to cut the computing resources needed. As it is a fall-back plan and not our main target, we intend to think about how we can compare the results we get when we use 64x64 images with the quantitative results given in the paper, if we decide to use this plan.
+
+-- version 1 submission --
+
+We didn't need to make any changes to our goals.
+
+The implementation of the paper and all the utility functions required to generate qualitative/quantitative results have been implemented. We were able to run the whole pipeline, starting from training the model to generating the tables/figures mentioned in our goals, without any errors. However, the qualitative results we got were not similar to the ones given in the original paper. It seems like the generator produces the same output. It was also the case with the quantitative results. 
+
+As we mentioned, the implementation has been done, but the outputs are not similar to the ones given in the original paper. This might be due to a simple implementational bug. So the first step will be going over the code. However, there are also several factors that might be the underlying issue causing this problem. For instance, the authors state that they trained their model for 300k iterations. Due to a lack of computational resources, we were able to train our model for 1k iterations. Additionally, although the authors mention that they use the same hyperparameters with StyleGAN2, we needed to select simpler parameters to decrease training time. Therefore, we are planning to repeat the experiments with the original parameters as well. This will be possible, as we have already implemented the model and have time to try different configurations.
+
+-- version 2 submission --
+
+We didn't need to make any changes to our goals.
+
+Unfortunately, we couldn't produce results similar to the ones given in the paper. 
+
+The model suffers from a mode collapsing problem as it cannot produce variational results, and the produced images are not what we aimed to produce. We tried these modifications to fix the problem:
+- We incorporated skip connections into the architecture, which were excluded in the original paper.
+- Additionally, we increased the complexity of the mapping network to its original architecture, instead of using the shallow mapping network mentioned in the paper.
+- We conducted extensive experiments by exploring various combinations and weights for the losses used in the model. This allowed us to identify the most effective configuration for achieving the desired results.
+- During our experimentation, we observed that the discriminator was converging at a faster rate compared to the generator. To address this, we experimented with different learning rates for both models, aiming to achieve a better balance and ensure optimal training dynamics.
+- Lastly, we try to fit the model on a small dataset to overfit, but that did not work either.

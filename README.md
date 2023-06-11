@@ -6,3 +6,4 @@ METU CENG796 Deep Generative Models 2023-Spring Course Projects
 * [MVCGAN](MVCGAN/) - Multi-View Consistent Generative Adversarial Networks for 3D-aware Image Synthesis (CVPR'22)
 * [GANSEG](GANSeg/) - GANSeg: Learning to Segment by Unsupervised Hierarchical Image Generation (CVPR'22)
 * [Styleformer](Styleformer/) - Styleformer: Transformer based Generative Adversarial Networks with Style Vector (CVPR'22)
+* [FurryGAN](FurryGAN/) - FurryGAN: High Quality Foreground-aware Image Synthesis (ECCV'22)
